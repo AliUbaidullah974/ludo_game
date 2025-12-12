@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ludo game 
+    </title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Using the Tailwind CDN above. Local `css/tailwind.css` is not needed without a build step -->
+<link rel="stylesheet" href="./css/output.css">
+
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+
+  <h1 class="text-4xl font-bold text-blue-700 mb-4">Ludo Game</h1>
+
+  <!-- Board container -->
+ <div id="board"
+     class="w-[480px] h-[480px] bg-white rounded-xl shadow-2xl p-2"
+     style="display:grid; grid-template-columns:repeat(15,1fr); grid-template-rows:repeat(15,1fr);">
+</div>
+
+
+  <!-- Dice container -->
+  <div class="mt-6 flex items-center space-x-4">
+    <button id="rollDice" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition">Roll Dice</button>
+    <div id="diceValue" class="w-16 h-16 flex items-center justify-center text-2xl font-bold bg-white rounded-lg shadow">-</div>
+  </div>
+
+  <div class="mt-3">
+    <div id="currentPlayer" class="text-lg font-semibold text-gray-700">Current: -</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/board.js"></script>
+  <script src="./js/dice.js"></script>
+  <script src="./js/pawn.js"></script>
+  <script src="./js/player.js"></script>
+  <script src="./js/game.js"></script>
+</body>
+</html>
